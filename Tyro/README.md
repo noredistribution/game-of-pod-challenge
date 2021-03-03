@@ -19,7 +19,7 @@ Context "developer" created.
 ```
 $ kubectl create role developer-role --verb="*" --resource=svc,pvc,pods -n development
 role.rbac.authorization.k8s.io/developer-role created
-```controlplane $```
+```
 
 4\. Create the rolebinding for user drogo in the development namespace:
 
