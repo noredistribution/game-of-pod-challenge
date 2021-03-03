@@ -1,0 +1,22 @@
+iapiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: vote-deployment
+  name: vote-deployment
+  namespace: vote
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: vote-deployment
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: vote-deployment
+    spec:
+      containers:
+      - image: kodekloud/examplevotingapp_vote:before
+        name: vote-deployment
